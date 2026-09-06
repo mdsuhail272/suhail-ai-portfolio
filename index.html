@@ -3,98 +3,799 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suhail | AI Automation & Generative AI</title>
-  <meta name="description" content="Suhail's portfolio focused on AI automation, generative AI, n8n workflows and digital marketing.">
+
+  <title>Mohammed Suhail | Meta Ads & AI Automation</title>
+
+  <meta name="description" content="Portfolio of Mohammed Suhail — Meta Ads specialist and AI Automation builder creating AI agents and n8n workflows.">
+
   <style>
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,Arial,sans-serif;background:#0b1020;color:#eef2ff;line-height:1.6}
-    .wrap{max-width:1050px;margin:auto;padding:0 22px}
-    header{padding:90px 0 65px;background:radial-gradient(circle at 80% 20%,#26346d 0,transparent 35%),#0b1020}
-    .tag{display:inline-block;padding:7px 13px;border:1px solid #39456f;border-radius:999px;color:#aebcff;font-size:14px}
-    h1{font-size:clamp(42px,8vw,76px);line-height:1.02;margin:20px 0 16px;letter-spacing:-2px}
-    .hero p{font-size:20px;max-width:720px;color:#b9c2dc}
-    .btn{display:inline-block;margin-top:18px;padding:12px 18px;border-radius:10px;background:#fff;color:#0b1020;text-decoration:none;font-weight:700}
-    section{padding:58px 0;border-top:1px solid #202946}
-    h2{font-size:30px;margin:0 0 20px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-    .card{background:#11182b;border:1px solid #222d4c;border-radius:16px;padding:23px}
-    .card h3{margin-top:0}
-    .muted{color:#aeb8d2}
-    .skills span{display:inline-block;margin:6px 6px 0 0;padding:8px 12px;border-radius:8px;background:#171f36;color:#cbd4ee;border:1px solid #273252}
-    footer{padding:35px 0;color:#8792af;text-align:center}
-    .status{color:#9ee7c4;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1px}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #08111f;
+      color: #f4f7fb;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 17, 31, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #1e3048;
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: #38bdf8;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+      color: #b7c5d6;
+    }
+
+    .nav-links a:hover {
+      color: #38bdf8;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 110px 0 90px;
+      background:
+        radial-gradient(circle at top left, rgba(14, 165, 233, 0.16), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.12), transparent 35%);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid #24476b;
+      border-radius: 50px;
+      color: #38bdf8;
+      background: #0c1a2b;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1.05;
+      letter-spacing: -3px;
+      max-width: 900px;
+      margin-bottom: 24px;
+    }
+
+    h1 span {
+      color: #38bdf8;
+    }
+
+    .hero-text {
+      max-width: 720px;
+      font-size: 20px;
+      color: #aebed0;
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #38bdf8;
+      color: #06101d;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #7dd3fc;
+    }
+
+    .btn-secondary {
+      border: 1px solid #2c4664;
+      color: #dbeafe;
+    }
+
+    .btn-secondary:hover {
+      border-color: #38bdf8;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-label {
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 5vw, 48px);
+      margin-bottom: 18px;
+      letter-spacing: -1.5px;
+    }
+
+    .section-intro {
+      color: #9fb0c4;
+      max-width: 760px;
+      margin-bottom: 42px;
+      font-size: 17px;
+    }
+
+    /* META ADS */
+
+    .featured {
+      background: #0c1727;
+      border-top: 1px solid #1d3148;
+      border-bottom: 1px solid #1d3148;
+    }
+
+    .meta-box {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 35px;
+      background: linear-gradient(135deg, #10223a, #0c1727);
+      border: 1px solid #24415e;
+      padding: 42px;
+      border-radius: 18px;
+    }
+
+    .meta-highlight {
+      color: #38bdf8;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .meta-box h3 {
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .meta-box p {
+      color: #aebed0;
+      margin-bottom: 20px;
+    }
+
+    .skill-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .skill-list li {
+      padding: 12px 14px;
+      background: #091421;
+      border: 1px solid #1d324a;
+      border-radius: 8px;
+      color: #c9d6e5;
+    }
+
+    /* PROJECTS */
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: #0c1727;
+      border: 1px solid #1d3148;
+      border-radius: 16px;
+      padding: 28px;
+      transition: 0.25s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: #38bdf8;
+    }
+
+    .project-number {
+      color: #38bdf8;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    .project-card h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: #aab9ca;
+      margin-bottom: 18px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 30px;
+      background: #10243a;
+      color: #8fd8ff;
+      border: 1px solid #1e4968;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .skill-card {
+      padding: 24px;
+      border-radius: 14px;
+      background: #0c1727;
+      border: 1px solid #1d3148;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .skill-card p {
+      color: #9fb0c4;
+      font-size: 14px;
+    }
+
+    /* ABOUT */
+
+    .about-box {
+      background: #0c1727;
+      border: 1px solid #1d3148;
+      border-radius: 16px;
+      padding: 35px;
+      color: #aebed0;
+      font-size: 17px;
+    }
+
+    .about-box strong {
+      color: #ffffff;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+      background:
+        radial-gradient(circle at center, rgba(14, 165, 233, 0.12), transparent 50%);
+    }
+
+    .contact p {
+      color: #aebed0;
+      margin-bottom: 25px;
+      font-size: 17px;
+    }
+
+    footer {
+      border-top: 1px solid #1d3148;
+      padding: 28px 0;
+      color: #718096;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .meta-box,
+      .project-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .meta-box {
+        padding: 28px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="wrap hero">
-      <span class="tag">AI Automation • Generative AI • n8n</span>
-      <h1>Suhail</h1>
-      <p>AI Automation & Generative AI Learner building practical workflows that connect AI with real business processes.</p>
-      <a class="btn" href="#projects">View My Projects</a>
-    </div>
-  </header>
 
-  <main class="wrap">
-    <section>
-      <h2>About Me</h2>
-      <p class="muted">
-        I am currently building my skills in generative AI and automation, with a focus on turning repetitive business tasks into practical AI-powered workflows.
-        My background in digital marketing and Meta Ads gives me a strong understanding of business problems, customer acquisition and performance.
-        I am now combining that experience with AI, APIs and workflow automation.
-      </p>
-    </section>
-
-    <section>
-      <h2>What I'm Learning</h2>
-      <div class="grid">
-        <div class="card"><h3>Generative AI</h3><p class="muted">Learning how modern AI models can understand information, generate content and support business workflows.</p></div>
-        <div class="card"><h3>AI Automation</h3><p class="muted">Designing workflows where AI handles analysis, generation, classification and decision-support tasks.</p></div>
-        <div class="card"><h3>n8n</h3><p class="muted">Learning to connect applications, APIs and AI models into reusable automation workflows.</p></div>
-        <div class="card"><h3>Google Gemini</h3><p class="muted">Exploring Gemini and Google's generative AI ecosystem as part of my AI learning journey.</p></div>
+  <nav>
+    <div class="container nav-content">
+      <div class="logo">
+        Mohammed <span>Suhail</span>
       </div>
+
+      <div class="nav-links">
+        <a href="#specialization">Meta Ads</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="badge">
+          Meta Ads • AI Automation • AI Agents
+        </div>
+
+        <h1>
+          Building smarter <span>marketing and automation systems.</span>
+        </h1>
+
+        <p class="hero-text">
+          I'm Mohammed Suhail, focused on Meta advertising and AI-powered
+          automation. I build workflows, AI agents and practical systems
+          designed to reduce repetitive work and improve digital operations.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#projects" class="btn btn-primary">
+            View My Projects
+          </a>
+
+          <a href="#about" class="btn btn-secondary">
+            About Me
+          </a>
+
+        </div>
+
+      </div>
+
     </section>
+
+
+    <!-- META ADS -->
+
+    <section class="featured" id="specialization">
+
+      <div class="container">
+
+        <div class="section-label">
+          Primary Specialization
+        </div>
+
+        <h2>Meta Ads</h2>
+
+        <p class="section-intro">
+          Meta advertising is my primary professional focus. Alongside
+          automation, I am developing practical knowledge of campaign
+          structure, audience targeting and performance-driven advertising.
+        </p>
+
+
+        <div class="meta-box">
+
+          <div>
+
+            <div class="meta-highlight">
+              MARKETING + AUTOMATION
+            </div>
+
+            <h3>
+              Meta Ads supported by AI and automation.
+            </h3>
+
+            <p>
+              My goal is to combine advertising knowledge with automation
+              skills. This creates an opportunity to work across campaign
+              operations, data handling and AI-assisted workflows.
+            </p>
+
+            <p>
+              I focus on understanding how marketing systems work and how
+              repetitive processes can be improved through automation.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <ul class="skill-list">
+
+              <li>Campaign structure and objectives</li>
+
+              <li>Audience and targeting concepts</li>
+
+              <li>Creative and ad analysis</li>
+
+              <li>Lead and customer workflow automation</li>
+
+              <li>AI-assisted marketing workflows</li>
+
+              <li>Performance-focused learning</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
 
     <section id="projects">
-      <h2>Projects & Experiments</h2>
-      <div class="grid">
-        <div class="card">
-          <div class="status">Learning Project</div>
-          <h3>AI Content Automation</h3>
-          <p class="muted">Designing an n8n workflow that takes business information and uses AI to generate content ideas, hooks, captions and calls-to-action for social media.</p>
+
+      <div class="container">
+
+        <div class="section-label">
+          Selected Work
         </div>
-        <div class="card">
-          <div class="status">Learning Project</div>
-          <h3>AI Lead Automation</h3>
-          <p class="muted">Exploring a workflow for capturing, organizing and qualifying business leads using automation and AI-assisted decision making.</p>
+
+        <h2>Automation & AI Projects</h2>
+
+        <p class="section-intro">
+          These projects represent hands-on learning and practical workflow
+          building using AI models, automation tools and structured processes.
+        </p>
+
+
+        <div class="project-grid">
+
+
+          <article class="project-card">
+
+            <div class="project-number">
+              PROJECT 01
+            </div>
+
+            <h3>AIShortForge</h3>
+
+            <p>
+              An AI-powered workflow designed to process long-form video,
+              extract audio, generate transcripts and analyze content for
+              potentially valuable short-form clips.
+            </p>
+
+            <div class="tags">
+              <span class="tag">n8n</span>
+              <span class="tag">Whisper</span>
+              <span class="tag">AI Analysis</span>
+              <span class="tag">Video Automation</span>
+            </div>
+
+          </article>
+
+
+          <article class="project-card">
+
+            <div class="project-number">
+              PROJECT 02
+            </div>
+
+            <h3>Customer Service AI Agent</h3>
+
+            <p>
+              An AI agent workflow capable of handling customer questions
+              using a chat trigger, AI model, memory and external data tools
+              for retrieving relevant information.
+            </p>
+
+            <div class="tags">
+              <span class="tag">AI Agent</span>
+              <span class="tag">Memory</span>
+              <span class="tag">API Tools</span>
+              <span class="tag">n8n</span>
+            </div>
+
+          </article>
+
+
+          <article class="project-card">
+
+            <div class="project-number">
+              PROJECT 03
+            </div>
+
+            <h3>AI Brand Search Agent</h3>
+
+            <p>
+              A multi-stage AI workflow that processes a request through
+              specialized AI steps including analysis, strategy, content,
+              image and video-oriented research processes.
+            </p>
+
+            <div class="tags">
+              <span class="tag">AI Agents</span>
+              <span class="tag">Research</span>
+              <span class="tag">Gemini</span>
+              <span class="tag">Automation</span>
+            </div>
+
+          </article>
+
+
+          <article class="project-card">
+
+            <div class="project-number">
+              PROJECT 04
+            </div>
+
+            <h3>Feedback AI Agent</h3>
+
+            <p>
+              An AI agent workflow created to process feedback through a
+              conversational interface, AI model and memory-supported
+              interaction flow.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Conversational AI</span>
+              <span class="tag">Memory</span>
+              <span class="tag">n8n</span>
+              <span class="tag">AI Workflow</span>
+            </div>
+
+          </article>
+
+
         </div>
-        <div class="card">
-          <div class="status">Learning Project</div>
-          <h3>AI-Powered Business Workflows</h3>
-          <p class="muted">Experimenting with practical automation ideas that reduce repetitive work for small and local businesses.</p>
-        </div>
+
       </div>
+
     </section>
 
-    <section>
-      <h2>Skills</h2>
-      <div class="skills">
-        <span>Generative AI</span><span>Google Gemini</span><span>n8n</span><span>AI Automation</span>
-        <span>Workflow Design</span><span>APIs & Integrations</span><span>Meta Ads</span><span>Digital Marketing</span>
+
+    <!-- SKILLS -->
+
+    <section id="skills" class="featured">
+
+      <div class="container">
+
+        <div class="section-label">
+          Capabilities
+        </div>
+
+        <h2>Skills I Am Building</h2>
+
+        <p class="section-intro">
+          My work is focused on combining digital marketing with AI and
+          workflow automation.
+        </p>
+
+
+        <div class="skills-grid">
+
+          <div class="skill-card">
+
+            <h3>Meta Ads</h3>
+
+            <p>
+              Campaign concepts, targeting, advertising strategy and
+              performance-focused learning.
+            </p>
+
+          </div>
+
+
+          <div class="skill-card">
+
+            <h3>n8n Automation</h3>
+
+            <p>
+              Building workflows that connect triggers, APIs, AI models
+              and automated processes.
+            </p>
+
+          </div>
+
+
+          <div class="skill-card">
+
+            <h3>AI Agents</h3>
+
+            <p>
+              Creating AI-powered agents with models, memory,
+              tools and structured workflows.
+            </p>
+
+          </div>
+
+
+          <div class="skill-card">
+
+            <h3>Generative AI</h3>
+
+            <p>
+              Exploring practical applications of AI for content,
+              research and automation.
+            </p>
+
+          </div>
+
+
+          <div class="skill-card">
+
+            <h3>API Integration</h3>
+
+            <p>
+              Connecting applications and external services to automated
+              workflows.
+            </p>
+
+          </div>
+
+
+          <div class="skill-card">
+
+            <h3>Workflow Design</h3>
+
+            <p>
+              Breaking complex processes into structured,
+              repeatable automated systems.
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
+
     </section>
 
-    <section>
-      <h2>My Goal</h2>
-      <p class="muted">
-        My goal is to become a skilled AI automation specialist and build practical AI solutions that help businesses save time, reduce repetitive work and make better use of their data.
-        I am actively learning by building small projects and turning concepts into working workflows.
-      </p>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <div class="section-label">
+          About Me
+        </div>
+
+        <h2>Learning by building.</h2>
+
+        <div class="about-box">
+
+          <p>
+            I am <strong>Mohammed Suhail</strong>, an aspiring professional
+            focused on Meta Ads, AI automation and AI agents.
+          </p>
+
+          <br>
+
+          <p>
+            My approach is hands-on: instead of only studying concepts,
+            I build workflows and projects to understand how automation
+            systems work in practice.
+          </p>
+
+          <br>
+
+          <p>
+            I am continuously improving my technical and marketing skills
+            and looking for opportunities where I can learn, contribute
+            and build practical solutions.
+          </p>
+
+        </div>
+
+      </div>
+
     </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact">
+
+      <div class="container">
+
+        <div class="section-label">
+          Let's Connect
+        </div>
+
+        <h2>Interested in working together?</h2>
+
+        <p>
+          Open to learning opportunities, entry-level roles and projects
+          involving Meta Ads, AI automation and workflow building.
+        </p>
+
+        <a
+          href="https://www.linkedin.com/in/mohammed-faizan9686/"
+          target="_blank"
+          class="btn btn-primary"
+        >
+          Connect on LinkedIn
+        </a>
+
+      </div>
+
+    </section>
+
   </main>
 
+
   <footer>
-    <div class="wrap">Suhail • AI Automation & Generative AI</div>
+
+    <div class="container">
+
+      © 2026 Mohammed Suhail • Meta Ads & AI Automation
+
+    </div>
+
   </footer>
+
 </body>
 </html>
